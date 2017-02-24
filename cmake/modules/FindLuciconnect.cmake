@@ -1,0 +1,10 @@
+if (WIN32)
+  find_path(LUCICONNECT_INCLUDE_DIR NAMES include/luciconnect/luciconnect.h HINTS ${LUCICONNECT_ROOT})
+  find_library(LUCICONNECT_LIBRARY NAMES lib/libluciconnect.dll HINTS ${LUCICONNECT_ROOT})
+else (WIN32)
+  find_path(LUCICONNECT_INCLUDE_DIR NAMES include/luciconnect/luciconnect.h HINTS ${LUCICONNECT_ROOT})
+  find_library(LUCICONNECT_LIBRARY NAMES lib/libluciconnect.so HINTS ${LUCICONNECT_ROOT})
+endif (WIN32)
+
+include(FindPackageHandleStandardArgs)
+find_package_handle_standard_args(Luciconnect DEFAULT_MSG LUCICONNECT_LIBRARY LUCICONNECT_INCLUDE_DIR)
