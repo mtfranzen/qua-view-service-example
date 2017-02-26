@@ -2,7 +2,6 @@
 #include <luciconnect/luciconnect.h>
 
 namespace Tutorial {
-
   class DistanceService : public luciconnect::quaview::Service {
 
   public:
@@ -54,7 +53,7 @@ namespace Tutorial {
 }
 
 int main(int argc, char **argv) {
-  std::shared_ptr<luciconnect::Connection> connection = std::make_shared<luciconnect::Connection>("localhost", 7654);
+  std::shared_ptr<luciconnect::Connection> connection = std::make_shared<luciconnect::Connection>("192.168.2.102", 7654);
   Tutorial::DistanceService* service = new Tutorial::DistanceService(connection);
   service->Run();
 }

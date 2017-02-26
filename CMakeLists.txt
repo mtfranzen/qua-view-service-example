@@ -23,7 +23,7 @@ include_directories (${LUCICONNECT_INCLUDE_DIR})
 
 # Linker
 link_directories (${PROJECT_SOURCE_DIR}/lib)
-link_directories (${LUCICONNECT_LIBRARY})
+link_directories (${LUCICONNECT_ROOT}/lib)
 
 # Compiler
 SET(CMAKE_EXE_LINKER_FLAGS "-static")
