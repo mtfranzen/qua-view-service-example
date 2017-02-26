@@ -2,7 +2,6 @@
 #include <luciconnect/luciconnect.h>
 
 namespace Tutorial {
-
   class DistanceService : public luciconnect::quaview::Service {
 
   public:
