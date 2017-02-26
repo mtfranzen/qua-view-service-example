@@ -38,8 +38,6 @@ else (WIN32)
     add_definitions(-DASIO_STANDALONE)
 endif (WIN32)
 
-
-
 add_executable(quaview-distance-service "${CMAKE_SOURCE_DIR}/src/service.cc")
 add_dependencies(quaview-distance-service luciconnect)
 target_link_libraries (quaview-distance-service luciconnect)

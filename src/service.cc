@@ -1,6 +1,5 @@
+#include <luciconnect/asio.h>
 #include <luciconnect/luciconnect.h>
-
-INITIALIZE_EASYLOGGINGPP
 
 namespace Tutorial {
 
