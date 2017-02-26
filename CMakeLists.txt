@@ -14,6 +14,7 @@ set (VERSION_PATCH 0)
 set (VERSION "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}")
 
 # Requirements
+find_package(Threads REQUIRED)
 find_package (Luciconnect REQUIRED)
 
 # Headers
@@ -40,4 +41,4 @@ endif (WIN32)
 
 add_executable(quaview-distance-service "${CMAKE_SOURCE_DIR}/src/service.cc")
 add_dependencies(quaview-distance-service luciconnect)
-target_link_libraries (quaview-distance-service luciconnect)
+target_link_libraries (quaview-distance-service luciconnect ${CMAKE_THREAD_LIBS_INIT})
